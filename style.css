@@ -14,36 +14,53 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 960px;
     height: 50px;
     margin: 0 auto;
-    padding-left: 99px;
 }
 .site-title {
     display: flex;
     align-items: center;
 }
-.site-title img {
+.site-title .logo {
     width: 25.49px;
     height: 25px;
+    margin-right: 9.51px;
 }
-h1 {
+.site-title .site-name {
     font-size: 1.8rem;
     font-weight: 700;
-    height: 50px;
-    margin-left: 9.51px;
-    line-height: 3.3rem;
+    line-height: 1.833;
+    margin-right: 334px;
 }
-h1 a {
+@media screen  and (max-width: 980px){
+    .site-title .site-name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.833;
+        margin-right: 80px;
+    } 
+    .nav-list {
+        margin-right: 15px;
+    }   
+}
+
+
+span.site-name {
+    height: 100%;
+    color: #505050;
+}
+.site-title a {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    /* padding: 9px 0px 8px 0; */
+    padding-left: 39px;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
 }
-h1 a:hover {
+.site-title a:hover {
    opacity: 0.5;
 }
 #nav-content {
@@ -60,7 +77,7 @@ h1 a:hover {
     align-items: center;
     height: 100%;
     gap: 10px;
-    margin-right: 60px;
+    /* margin-right: 60px; */
     margin-top: 2px;
 }
 .nav-list a {
@@ -71,7 +88,7 @@ h1 a:hover {
     /* padding: 9px 0 8px 0; */
     font-size: 1.4em;
     font-weight: 700;
-    line-height: 3.3rem;
+    line-height: 2.357;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -92,13 +109,24 @@ h1 a:hover {
     .nav-list {
         display: none;
     }
-    .site-title img {
-        margin-left: 20px;  
+    .site-title .site-name {
+        margin: 0;
     }
-    h1 a{
+
+
+    .site-title a {
+        margin-left: 20px;
+        padding: 0;  
+    }
+    /* .site-title h1 {
         font-size: 2rem;
         font-weight: 700;
-        line-height: 3.3rem;
+        line-height: 1.65;
+    } */
+    .site-title .site-name {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.65;
     }
 }    
     
@@ -121,19 +149,32 @@ h1 a:hover {
     height: 100%;
     object-fit: cover;
 }
+
 .hero-text {
     position: absolute;
     top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
+    left: 0;
+    transform: translateY(-46%);
     width: 45.56%;
     height: 42%;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.702);  
-    padding: 26px 0 0 99px;
-    margin-top: 6px;
+    z-index: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
+.hero-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(225,225,225,0.702);
+    z-index: 0;
+}
+
+
 @media screen and (max-width: 920px) {
     .hero-text {
         padding-left: 80px;
@@ -142,25 +183,36 @@ h1 a:hover {
 }
 
 .hero-text h2 {
-    /* font-size: 2.5rem; */
-    font-size: clamp(2rem, 2.31vw, 2.5rem);
+    font-size: 2.5rem;
     font-weight: 700;
-    padding-bottom: 25px;
+    padding-left: 60px;
+    /* margin-top: 23px; */
+    /* margin-bottom: 8px; */
+    z-index: 1;
+    position: relative;
 }
 span {
-    /* font-size: 4rem; */
-    font-size: clamp(3rem,3.7vw, 4rem);
+    font-size: 4rem;
     font-weight: 700;
     color: #0D96A0;
-    line-height: 6rem;
+    line-height: 1.5;
+    z-index: 1;
+    position: relative;
 }
-/* font-size: clamp(最小rem, 可変幅vw, 最大rem); */
+/* font-size: clamp(最小rem, 可変幅vw, 最大rem);  vwを使うとリキッドコーディングになる*/
 
-@media screen and (max-width: 920px) {
-    span {
-        line-height: 4rem;
+.hero-text h2 span {
+    display: block;
+    margin-top: 8px;
+}
+@media screen and (max-width: 925px) {
+    .hero-text h2 {
+        font-size: 2rem !important;
+        padding-left: 0;
     }
-    
+    .hero-text h2 span {
+        font-size: 3rem !important;
+    }    
 }
 
 
@@ -186,56 +238,34 @@ span {
     }
     .hero-text {
         position: absolute;
-        top: 85.09%;
+        top: 84.8%;
         left: 0%;
         width: 82.9%;
         /* max-width: 82.9%; */
         height: 26.91%;
-        bottom: 0;
+        bottom: 0%;
         background-color: rgb(225,225,225,0.7);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: left;  
-        padding: 3px 0 0 21px ;
+        padding: 3px 0 0 0px ;
         margin: 0 !important;  
     }
-    /* .hero-text {
-        position: absolute;
-        top: 50%;
-        left: 0%;
-        transform: translateY(-50%);
-        width: 100%;
-        max-width: 492px;
-        min-height: 210px;
-        box-sizing: border-box;
-        background-color: rgba(255, 255, 255, 0.702);  
-        padding: 27px 0 0 98px;
-        margin-top: 6px;
-    
-    } */
-
-
-    
-
-
-
-
-
 
 
 
     .hero-text h2 {
         padding: 0;
-        font-size: 2.8rem;
+        font-size: 3rem !important;
         font-weight: 700;
     }
-    h2 span {
+    .hero-text h2 span {
         display: block;
-        font-size: 3.8rem;
+        font-size: 4.5rem !important;
         font-weight: 700;
-        line-height: 4rem;
+        line-height: 1.333;
         margin-top: 5px;
     }
     .sp-only {
@@ -257,26 +287,26 @@ span {
     } */        
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .hero-text h2 {
-        font-size: 2rem;
+        font-size: 2rem !important;
         font-weight: 700;
     }
-    h2 span {
+    .hero-text h2 span {
         display: block;
-        font-size: 3rem;
+        font-size: 3rem !important;
         font-weight: 700;
-        line-height: 4rem;
+        line-height: 1.333;
         margin-top: 5px;
     }    
 }
 
 @media screen and (max-width: 360px) {
     .hero-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
     }
-    h2 span {
-        font-size: 2.5rem;
+    .hero-text h2 span {
+        font-size: 2.5rem !important;
     }
     
 }
@@ -286,35 +316,57 @@ span {
 
 
 #greeting {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     text-align: center;
 }
 #greeting h2 {
     font-size: 3rem;
     font-weight: 700;
-    line-height: 5rem;
+    line-height: 1.666;
     margin-top: 60px;
     color: #0D96A0;
 }
 #greeting p {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 3.3rem;
+    line-height: 1.833;
     margin-top: 15px;
     margin-bottom: 60px;
 }
+#greeting .inner {
+    position: relative;
+}
 .paw-trail {
     position: absolute;
-    right: 70.25px;
-    bottom:31.88px;
-    top: 115px;
+    left: 93.86%;
+    top: 70.12%;
     width: 100%;
     height: auto;
     max-width: 83.75px;
     opacity: 0.7;
     
 }
+@media screen and (max-width:970px) {
+    .paw-trail {
+        position: absolute;
+        top: 78.54%;      /* 115px / 385px */
+        left: 83.90%;     /* 277.1px / 375px */
+        width: 18.23%;
+        max-width: 83.75px;    /* 68.35px / 375px */
+        height: auto;
+        right: auto;
+        bottom: auto;
+        opacity: 0.7;
+      }
+      .paw-trail img {
+        display: block;
+        width: 100%;
+      }
+}
+
+    
+
 
 @media screen  and (max-width: 767px) {
     .inner  {
@@ -325,19 +377,19 @@ span {
         margin: 0 auto;
     } 
 
-    #greeting {
+    /* #greeting {
         aspect-ratio: 375 / 385;
-    }
+    } */
     
     #greeting h2 {
         font-size: 2.5rem;
-        line-height: 3.5rem;
+        line-height: 1.4;
         padding-top: 42px ;
         margin-top: 0;
     }
     #greeting p {
         font-size: 1.6rem;
-        line-height: 3rem;
+        line-height: 1.875;
         text-align: left;
         margin: 14px 0 44px 0;
     }
@@ -348,8 +400,8 @@ span {
         top: 78.54%;      /* 115px / 385px */
         left: 73.90%;     /* 277.1px / 375px */
         width: 18.23%;    /* 68.35px / 375px */
+        max-width: 68.35px;
         height: auto;
-        max-width: none;
         right: auto;
         bottom: auto;
         opacity: 0.7;
@@ -365,7 +417,7 @@ span {
     background-color: rgba(13, 150, 160, 0.102);
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 68px;
+    padding-bottom: 67px;
 }
 .strengths-title {
     position: relative;
@@ -385,14 +437,21 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url("images/足跡_1.png");
+    background-image: url("images/足跡_1.svg");
     background-size: contain;
     background-repeat: no-repeat
 }
 .inner {
-    padding-inline: 100px;
+    max-width: 880px;
     margin: 0 auto;
 }
+@media screen and (max-width:900px){
+    .inner {
+        padding-inline: 30px;
+    }
+    
+}
+
 .strengths-block {
     display: flex;
     justify-content: space-between;
@@ -407,7 +466,7 @@ span {
 .strengths-item h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    line-height: 3.3rem;
+    line-height: 1.5;
     padding-bottom: 19px;
 }
 #greeting h3:last-of-type {
@@ -417,22 +476,30 @@ span {
 .strengths-item p {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 3.3rem;    
+    line-height: 1.833;    
 }
 .strengths-block:nth-of-type(2) {
     flex-direction: row-reverse;
+    margin-top: 43px;
+}
+.strengths-block:nth-of-type(2) h3 {
+    padding-top: 7px;
+    padding-bottom: 17px;
 }
 /* ↑2番目配置入れ替え */
+.strengths-block:nth-of-type(3) {
+    margin-top: 48px;
+}
 
 .strengths-image {
     flex: 50%;
-    max-width: 440px;
-    height: 247px;
+    aspect-ratio: 440 / 247;
     margin-top: 2px;
 }
 .strengths-image img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 @media screen  and (max-width: 767px) {
@@ -469,7 +536,7 @@ span {
     }
     .strengths-item h3 {
         font-size: 2rem;
-        line-height: 3rem;
+        line-height: 1.5;
         margin-top: 25px;
         padding-bottom: 0;
     }
@@ -478,11 +545,16 @@ span {
     .strengths-item p {
         order: 3;
         font-size: 1.6rem;
-        line-height: 3rem;
+        line-height: 1.875;
         text-align: left;
         padding-top: 7px;
         padding-bottom: 40px;
     }
+    .strengths-block:nth-of-type(2) p {
+        padding-top: 10px;
+        padding-bottom: 43px;
+    }
+
     .strengths-block:nth-of-type(3) p {
         padding-bottom: 0 ;
     }
@@ -491,17 +563,34 @@ span {
         display: block;
         width: 100%;
     }
+    .strengths-block:nth-of-type(2) {
+        margin-top: 0; 
+      }
     
-    /* 横幅に広がらない理由を確認する */
+      .strengths-block:nth-of-type(2) h3 {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    
+      .strengths-block:nth-of-type(3) {
+        margin-top: 0;
+      }
+
+
+    
 }
 
-/* @media screen  and (max-width: 900px) {
-    #strengths {
-        padding-left: 20px;
-        padding-right: 20px;
-
+@media screen and (max-width: 365px) {
+    .strengths-item h3 {
+        font-size: 1.6rem;
+        line-height: 1.5;
     }
-} */
+    .strengths-item p {
+        font-size: 1.4rem;
+        line-height: 1.875;
+    }
+    
+}
 
 
 #service {
@@ -528,30 +617,31 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url("images/足跡_1.png");
+    background-image: url("images/足跡_1.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
 .service-list {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 50px;
     margin-top: 45px;
 }
 .service-block {
     text-align: center;
+    height: 100%;
 }
 .service-item h3 {
     font-size: 2rem;
     font-weight: 700;
-    line-height: 2.5rem;
+    line-height: 1.25;
     margin-top: 19px;
 }
 .service-item p {
     font-size: 1.7rem;
     font-weight: 500;
-    line-height: 3rem;
+    line-height: 1.764;
     margin-top: 8px;
     text-align: left;
 }
@@ -582,7 +672,7 @@ span {
 
     .service-title {
         padding-top: 44px;
-        margin-bottom: 12px;
+        margin-bottom: 47px;
     }
     .service-list {
         display: flex;
@@ -595,14 +685,14 @@ span {
     .service-item h3 {
         margin-top: 27px;
         font-size: 2rem;
-        font-weight: 500;
-        line-height: 3rem;
+        font-weight: 700;
+        line-height: 1.5;
     }
     .service-item p {
         width: 100%;
         font-size: 1.6rem;
         font-weight: 500;
-        line-height: 3rem;
+        line-height: 1.875;
         margin-bottom: 40px;
     }
     .service-image {
@@ -646,7 +736,7 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url("images/足跡_1.png");
+    background-image: url("images/足跡_1.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -656,14 +746,20 @@ span {
     list-style: none;
 }
 .news-item {
-    display: flex;
     border-bottom: 1px solid #707070;
 }
+.news-link {
+    display: flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
 .news-date {
     width: 110px;
     font-size: 1.7rem;
     font-weight: 700;
-    line-height: 2.5rem;
+    line-height: 1.47;
     color: #505050;
     text-align: left;
     padding: 17px 0px 14px 19px;
@@ -674,14 +770,12 @@ span {
     width: 185px;
     font-size: 2rem;
     font-weight: 700;
-    line-height: 2.5rem;
+    line-height: 1.25;
     color: #0D96A0;
     padding: 17px 0px 14px 25px;
     text-align: left;
-    cursor: pointer;
-    transition: all 0.3s ease;
 }
-.news-heading:hover {
+.news-link:hover {
     opacity: 0.5;
 }
 
@@ -689,7 +783,7 @@ span {
     width: 491px;
     font-size: 1.7rem;
     font-weight: 500;
-    line-height: 3rem;
+    line-height: 1.764;
     text-align: left;
     flex: 1;
     padding: 15px 0px 14px 49px;
@@ -700,10 +794,10 @@ span {
         padding-bottom: 50px;
     }
     .news-title {
-        padding: 40px 0 46px 3px;
+        padding: 43px 0 45px 3px;
         gap: 20px;
     }
-    .news-item {
+    .news-link {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -711,20 +805,20 @@ span {
     }
     .news-date {
         font-size: 1.7rem;
-        line-height: 2.5rem;
+        line-height: 1.47;
         text-align: left;
         padding: 28px 0 0 10px;
     }
     .news-heading {
         font-size: 2rem;
-        line-height: 2.5rem;
+        line-height: 1.25;
         text-align: left;
         padding: 3px 0 0 10px;
     }
     .news-text {
         max-width: 100%;
         font-size: 1.6rem;
-        line-height: 2.4rem;
+        line-height: 1.5;
         text-align: left;
         padding: 8px 6px 24px 10px;
         overflow-wrap: break-word;
@@ -770,29 +864,38 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url(images/足跡_1.png);
+    background-image: url(images/足跡_1.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
 .access-content {
     display: flex;
+    align-items: stretch;
     max-width: 880px;
     margin: 0 auto;
     padding-top: 46px;
     padding-bottom: 70px;
 }
-.info {
+/* align-items: stretchで子要素と高さを揃える */
+
+/* .map {
     flex: 1;
-}
-.map {
-    width: 50%;
+    display: block;  
     max-width: 440px;
-    height: 300px;   
+} */
+
+.map {
+    flex: 0 0 440px;
+    display: block;  
+    max-width: 100%;
 }
 .map-wrap {
+    aspect-ratio: 22 / 15;
     width: 100%;
-    height: 300px;
+    height: 100%;
 }
+/* GoogleMap比率設定する */
+/* stretch+子要素高さ書く */
 
 .map iframe {
     display: block;
@@ -801,54 +904,61 @@ span {
 }
 
 .info {
+    flex: 1;
     padding-left: 47px;
-    width: 100%;
+    /* width: 50% */
 }
 p.name {
     font-size: 2.2rem;
     font-weight: 700;
-    line-height: 3.3rem;
+    line-height: 1.5;
 }
 p.address {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 2.7rem;
+    line-height: 1.5;
     padding-top: 15px;
 }
 span.address {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 2.7rem;
+    line-height: 1.5;
     padding-top: 15px;
     padding-left: 16px;
     color: #505050;
 }
+.link-sp-only {
+    display: none;
+}
 p.tel {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 2.7rem;
+    line-height: 1.5;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-span.tel {
+span.tel-number {
     font-size: 2.5rem;
     font-weight: 700;
-    line-height: 4rem;
+    line-height: 1.6;
 }
 p.e-mail {
     width: 100%;
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 2.7rem;
+    line-height: 1.5;
     padding-bottom: 29px;
     border-bottom: 1px solid #707070;
     padding-right: 47px;
+}
+.e-mail a:hover {
+    opacity: 0.5;
 }
 
 .clinic-info p {
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: 4rem;
+    line-height: 2.222;
     padding-top: 13px;
     padding-left: 4px;
 }
@@ -867,17 +977,28 @@ p.clinic-info {
     .access-content {
         display: flex;
         flex-direction: column;
+        align-items: unset;
         padding-bottom: 50px;
     }
     .map-wrap {
+        display: block;
+        aspect-ratio: 335 / 222 !important;
+        /* 横335：縦222 */
         width: 100% !important;
-        height: 222px;
+        height: auto;
     }
     .map {
+        flex: unset;
         display: block;
         width: 100% !important;
-        height: 100%;
+        max-width: none;
+        height: auto;
     }
+    .map iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
     .info {
         padding: 0;
     }
@@ -887,32 +1008,47 @@ p.clinic-info {
     }
     p.address {
         font-size: 1.6rem;
+        line-height: 1.5;
         padding-top: 13px;
     }
     span.address {
         font-size: 1.6rem;
         font-weight: 500;
-        line-height: 2.4rem;
+        line-height: 1.5;
     }
     p.tel {
         font-size: 1.6rem;
-        line-height: 2.7rem;
+        line-height: 1.687;
         padding-top: 4px;
         padding-bottom: 6px;
     }
-    span.tel {
+    .pc-only {
+        display: none;
+    }
+    .link-sp-only {
+        display: block;
+    }
+    .link-sp-only a:hover {
+        opacity: 0.5;
+    }
+    span.tel-number {
         font-size: 2.5rem;
-        padding-top: 4px;
+        line-height: 1.6;
+        padding-top: 6px;
         padding-bottom: 4px;
+        padding-left: 13px;
     }
     p.e-mail {
         font-size: 1.6rem;
-        line-height: 2.4rem;
-        padding-bottom: 15px;
+        line-height: 1.5;
+        padding-bottom: 19px;
+    }
+    .e-mail a:hover {
+        opacity: 0.5;
     }
     .clinic-info p {
         font-size: 1.6rem;
-        line-height: 3rem;
+        line-height: 1.875;
         padding-left: 0;
         padding-bottom: 0;
     }
@@ -955,14 +1091,14 @@ p.clinic-info {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url(images/足跡_1.png);
+    background-image: url(images/足跡_1.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
 .contact-text p {
     font-size: 1.7rem;
     font-weight: 500;
-    line-height: 3rem;
+    line-height: 1.764;
     text-align: center;
     margin-top: 25px;
 }
@@ -985,7 +1121,7 @@ p.clinic-info {
     width: 16%;
     font-size: 2rem;
     font-weight: 700;
-    line-height: 3.3rem;
+    line-height: 1.65;
     padding-top: 7px;
 }
 .spacing {
@@ -1017,10 +1153,15 @@ textarea {
     resize: none;
 }
 .contact-btn {
-    text-align: center;
-    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 49px;
 }
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 50px;
     margin-bottom: 80px;
@@ -1029,14 +1170,16 @@ textarea {
     font-size: 2.5rem;
     letter-spacing: 5px;
     font-weight: 700;
-    line-height: 3.3rem;
+    /* line-height: 1.32; */
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 10px;
     /* border: 1px solid #0D96A0; */
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 .btn:hover {
-    opacity: 0.5;
+    background-color: #0A6C75;
+    color: #f0f0f0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1044,7 +1187,7 @@ textarea {
         padding-top: 45px;
     }
     .contact-text p  {
-        margin-top: 40px;
+        margin-top: 43px;
         font-size: 1.6rem;
         text-align: left;
     }
@@ -1068,14 +1211,15 @@ textarea {
     }
     .form-textarea {
         width: 100%;
-        padding-top: 0;
-        padding-bottom: 5px;
+        padding: 0;
     }
 
 
     input[type="text"],
     input[type="email"] {
     height: 50px;
+    padding: 5px 15px;
+    margin-top: 7px;
     }
 
     .btn {
@@ -1083,7 +1227,7 @@ textarea {
         height: 41px;
         font-size: 2rem;
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 51px;
     }
     
 }
@@ -1112,14 +1256,14 @@ textarea {
 .footer-nav li {
     font-size: 2rem;
     font-weight: 700;
-    line-height: 3.3rem;
+    line-height: 1.65;
     color: #ffffff;
 }
 .footer-nav {
     border-bottom: 1px solid #ffffff;
     width: 737px;
-    padding-top: 5px;
-    padding-bottom: 19px;
+    padding-top: 1px;
+    padding-bottom: 18px;
     margin: 0 auto;
     margin-bottom: 0;
 }
@@ -1129,7 +1273,7 @@ textarea {
     align-items: center;
     gap: 18px;
     font-size: 2rem;
-    line-height: 3.3rem;
+    line-height: 1.65;
     margin-top: 27px;
     color: #ffffff;
 }
@@ -1148,6 +1292,13 @@ textarea {
     height: 18px;
     margin-bottom: 72px;
 }
+.sns-area a img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .sns-area a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
 
  @media screen and (max-width:767px) {
     .footer {
@@ -1157,8 +1308,8 @@ textarea {
     }
     .footer-nav {
         width: 100%;
-        padding: 5px 21px 19px 22px;
-        margin-bottom: 9px;
+        padding: 5px 25px 19px 19px;
+        margin-bottom: 14px;
     }
     .footer-nav ul {
         margin-top: 40px;
@@ -1181,5 +1332,13 @@ textarea {
     }
     .sns-area {
         margin-top: 24px;
+    }
+ }
+ @media screen and (max-width:345px) {
+    .footer-nav li {
+        font-size: 1.6rem;
+    }
+    .copyright {
+        font-size: 1.2rem;
     }
  }

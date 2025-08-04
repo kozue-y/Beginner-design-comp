@@ -359,7 +359,7 @@ span {
 }
 .paw-trail {
     position: absolute;
-    left: 93.86%;
+    left: 90.86%;
     top: 70.12%;
     width: 100%;
     height: auto;
@@ -461,16 +461,20 @@ span {
     background-size: contain;
     background-repeat: no-repeat
 }
+
+/* content-box max-width の値に padding を含めないようにする */
 .inner {
-    max-width: 880px;
+    max-width: 940px;
     margin: 0 auto;
+    padding-inline: 30px;
 }
-@media screen and (max-width:900px){
+
+/*メディアクエリの設定不要
+ @media screen and (max-width:900px){
     .inner {
         padding-inline: 30px;
-    }
-    
-}
+    }    
+} */
 
 .strengths-block {
     display: flex;

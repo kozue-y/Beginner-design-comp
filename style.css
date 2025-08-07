@@ -219,7 +219,7 @@ span {
     display: block;
     margin-top: 8px;
 }
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 930px) {
     .hero-text h2 {
         font-size: 2rem !important;
         padding-left: 0;
@@ -228,6 +228,20 @@ span {
         font-size: 3rem !important;
     }    
 }
+
+@media screen and (max-width: 770px) {
+    .hero-text h2 {
+        font-size: 1.8rem !important;
+        padding-left: 0;
+    }
+    .hero-text h2 span {
+        font-size: 2.5rem !important;
+    }    
+}
+
+
+
+
 
 
 .sp-only {
@@ -307,7 +321,7 @@ span {
     } */        
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 510px) {
     .hero-text h2 {
         font-size: 2rem !important;
         font-weight: 700;
@@ -604,7 +618,7 @@ span {
     
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 374px) {
     .strengths-item h3 {
         font-size: 1.6rem;
         line-height: 1.5;
@@ -1406,7 +1420,7 @@ span.hospital-name {
         margin-top: 24px;
     }
  }
- @media screen and (max-width:350px) {
+ @media screen and (max-width:365px) {
     .footer-nav li {
         font-size: 1.6rem;
     }

@@ -219,7 +219,7 @@ span {
     display: block;
     margin-top: 8px;
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 940px) {
     .hero-text h2 {
         font-size: 2rem !important;
         padding-left: 0;
@@ -229,7 +229,7 @@ span {
     }    
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 785px) {
     .hero-text h2 {
         font-size: 1.8rem !important;
         padding-left: 0;

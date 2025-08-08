@@ -321,7 +321,7 @@ span {
     } */        
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 520px) {
     .hero-text h2 {
         font-size: 2rem !important;
         font-weight: 700;
@@ -620,7 +620,7 @@ span {
 
 @media screen and (max-width: 374px) {
     .strengths-item h3 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         line-height: 1.5;
     }
     .strengths-item p {

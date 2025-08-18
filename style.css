@@ -7,6 +7,7 @@ body {
     font-family: 'Noto Sans JP' , sans-serif;
     font-style: normal;
     color: #505050;
+    margin-top: 50px;
 
 }
 .header {
@@ -17,6 +18,11 @@ body {
     max-width: 960px;
     height: 50px;
     margin: 0 auto;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 .site-title {
     display: flex;
@@ -1206,7 +1212,9 @@ textarea {
     background-color: #ffffff;
     height: 300px;
     resize: none;
+    display: block;
 }
+/* ボタンとテキストエリアの余白をmargin: 0;にする */
 .contact-btn {
     display: flex;
     justify-content: center;
@@ -1282,7 +1290,7 @@ textarea {
         height: 41px;
         font-size: 2rem;
         margin-top: 0;
-        margin-bottom: 51px;
+        margin-bottom: 54px;
     }
     
 }
@@ -1318,7 +1326,7 @@ textarea {
     border-bottom: 1px solid #ffffff;
     width: 737px;
     padding-top: 1px;
-    padding-bottom: 18px;
+    padding-bottom: 21px;
     margin: 0 auto;
     margin-bottom: 0;
 }

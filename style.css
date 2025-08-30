@@ -2,6 +2,7 @@
 html {
      font-size: 10px;
      scroll-behavior: smooth;
+     scroll-padding-top: 5rem;
 }
 body {
     font-family: 'Noto Sans JP' , sans-serif;
@@ -80,7 +81,7 @@ span.site-name {
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding-left: 39px;
+    margin-left: 39px;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -132,9 +133,9 @@ span.site-name {
     .nav-list {
         display: none;
     }
-    .site-title .site-name {
+    /* .site-title .site-name {
         margin: 0;
-    }
+    } */
 
 
     .site-title a {
@@ -178,8 +179,10 @@ span.site-name {
     top: 50%;
     left: 0;
     transform: translateY(-46%);
-    width: 45.56%;
-    height: 42%;
+    /* width: 45.56%;
+    height: 42%; */
+    width: 492px;
+    height: 210px;
     box-sizing: border-box;
     z-index: 1;
     
@@ -229,6 +232,10 @@ span {
     margin-top: 8px;
 }
 @media screen and (max-width: 940px) {
+    .hero-text {
+        width: 395px;
+        height: 170px;
+    }
     .hero-text h2 {
         font-size: 2rem !important;
         padding-left: 0;
@@ -239,6 +246,11 @@ span {
 }
 
 @media screen and (max-width: 785px) {
+    .hero-text {
+        width: 350px;
+        height: 150px;
+    }
+
     .hero-text h2 {
         font-size: 1.8rem !important;
         padding-left: 0;
@@ -407,6 +419,13 @@ span {
         width: 100%;
       }
 }
+@media screen and (max-width: 890px) {
+    #greeting p {
+        font-size: 1.5rem;
+    }
+
+    
+}
 
     
 
@@ -447,7 +466,7 @@ span {
         height: auto;
         right: auto;
         bottom: auto;
-        opacity: 0.7;
+        opacity: 0.8;
       }
       .paw-trail img {
         display: block;
@@ -480,7 +499,7 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url("images/足跡_1.svg");
+    background-image: url("images/pawpad.svg");
     background-size: contain;
     background-repeat: no-repeat
 }
@@ -514,7 +533,8 @@ span {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.5;
-    padding-bottom: 19px;
+    /* padding-bottom: 19px; */
+    margin-bottom: 19px;
 }
 #greeting h3:last-of-type {
     margin-top: 29px;
@@ -527,15 +547,21 @@ span {
 }
 .strengths-block:nth-of-type(2) {
     flex-direction: row-reverse;
-    margin-top: 43px;
+    margin-top: 50px;
 }
 .strengths-block:nth-of-type(2) h3 {
-    padding-top: 7px;
-    padding-bottom: 17px;
+    /* margin-top: 7px; */
+    /* padding-bottom: 17px; */
 }
 /* ↑2番目配置入れ替え */
 .strengths-block:nth-of-type(3) {
     margin-top: 48px;
+}
+
+.strengths-image picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .strengths-image {
@@ -551,7 +577,7 @@ span {
 
 @media screen  and (max-width: 767px) {
     #strengths {
-        padding-bottom: 35px;
+        padding-bottom: 0;
     }    
     .strengths-title {
         padding-top: 55px;
@@ -584,8 +610,8 @@ span {
     .strengths-item h3 {
         font-size: 2rem;
         line-height: 1.5;
-        margin-top: 25px;
-        padding-bottom: 0;
+        margin-top: 26px;
+        margin-bottom: 0;
     }
     /* h3の１個目メディアクエリだけ改行用コード書く */
 
@@ -594,12 +620,12 @@ span {
         font-size: 1.6rem;
         line-height: 1.875;
         text-align: left;
-        padding-top: 7px;
-        padding-bottom: 40px;
+        margin-top: 8px;
+        margin-bottom: 40px;
     }
     .strengths-block:nth-of-type(2) p {
-        padding-top: 10px;
-        padding-bottom: 43px;
+        /* padding-top: 10px;
+        padding-bottom: 43px; */
     }
 
     .strengths-block:nth-of-type(3) p {
@@ -615,6 +641,7 @@ span {
       }
     
       .strengths-block:nth-of-type(2) h3 {
+        margin-top: 26px;
         padding-top: 0;
         padding-bottom: 0;
       }
@@ -649,8 +676,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 17px;
-    padding-top: 62px;
+    gap: 20px;
+    padding-top: 65px;
 }    
 .service-title h2 {
     font-size: 2.5rem;
@@ -664,26 +691,29 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url("images/足跡_1.svg");
+    background-image: url("images/pawpad.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
 .service-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
     gap: 50px;
     margin-top: 45px;
 }
 .service-block {
     text-align: center;
+    width: 260px;
     height: 100%;
+}
+.service-item {
+    margin-top: 19px;
 }
 .service-item h3 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.25;
-    margin-top: 19px;
 }
 .service-item p {
     font-size: 1.7rem;
@@ -718,8 +748,8 @@ span {
     }
 
     .service-title {
-        padding-top: 44px;
-        margin-bottom: 47px;
+        padding-top: 40px;
+        margin-bottom: 42px;
     }
     .service-list {
         display: flex;
@@ -729,8 +759,11 @@ span {
         gap: 0;
         margin-top: 39px;
     }
+    .service-block {
+        width: 100%;
+    }
     .service-item h3 {
-        margin-top: 27px;
+        margin-top: 32px;
         font-size: 2rem;
         font-weight: 700;
         line-height: 1.5;
@@ -740,7 +773,7 @@ span {
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 1.875;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
     .service-image {
         display: block;
@@ -768,8 +801,8 @@ span {
     align-items: center;
     gap: 20px;
     padding-top: 63px;
-    padding-bottom: 45px;
-    border-bottom: 1px solid #707070;
+    margin-bottom: 45px;
+    /* border-bottom: 1px solid #707070; */
 }
 .news-title h2 {
     font-size: 2.5rem;
@@ -783,7 +816,7 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url("images/足跡_1.svg");
+    background-image: url("images/pawpad.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -792,8 +825,12 @@ span {
     margin: 0 auto;
     list-style: none;
 }
+.news-list {
+    border-top: solid 1px #707070;
+}
 .news-item {
     border-bottom: 1px solid #707070;
+    padding: 15px 0;
 }
 .news-link {
     display: flex;
@@ -809,7 +846,7 @@ span {
     line-height: 1.47;
     color: #505050;
     text-align: left;
-    padding: 17px 0px 14px 19px;
+    margin-left: 20px;
    
 
 }
@@ -819,7 +856,7 @@ span {
     font-weight: 700;
     line-height: 1.25;
     color: #0D96A0;
-    padding: 17px 0px 14px 25px;
+    margin-left: 7px;
     text-align: left;
 }
 .news-link:hover {
@@ -833,7 +870,7 @@ span {
     line-height: 1.764;
     text-align: left;
     flex: 1;
-    padding: 15px 0px 14px 49px;
+    margin-left: 25px;
 }
 
 @media screen  and (max-width: 767px) {
@@ -878,14 +915,6 @@ span {
     }
     
 }
-/* sectionのトップ・ボトム調整する */
-/* @media screen  and (max-width: 900px) {
-    #news {
-        padding-left: 20px;
-        padding-right: 20px;
-
-    }
-} */
 
 
 
@@ -911,7 +940,7 @@ span {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url(images/足跡_1.svg);
+    background-image: url(images/pawpad.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -920,8 +949,9 @@ span {
     align-items: stretch;
     max-width: 880px;
     margin: 0 auto;
-    padding-top: 46px;
-    padding-bottom: 70px;
+    margin-top: 41px;
+    margin-bottom: 70px;
+    gap: 47px;
 }
 /* align-items: stretchで子要素と高さを揃える */
 
@@ -951,7 +981,7 @@ span {
 }
 .info {
     flex: 1;
-    padding-left: 47px;
+    /* margin-left: 47px; */
     /* width: 50% */
 }
 
@@ -976,22 +1006,24 @@ p.address {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    padding-top: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 span.address {
+    display: inline-block;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    padding-top: 15px;
     padding-left: 16px;
     color: #505050;
+    white-space: normal;
 }
 p.tel {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px; */
+    margin-bottom: 10px;
 }
 span.tel-number {
     font-size: 2.5rem;
@@ -1025,11 +1057,11 @@ p.e-mail {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.222;
-    padding-top: 13px;
+    margin-top: 13px;
     padding-left: 4px;
 }
 p.clinic-info {
-    padding-top: 0;
+    margin-top: 0;
     padding-bottom: 13px;
     border-bottom: 1px solid #707070;
 
@@ -1156,7 +1188,7 @@ p.clinic-info {
     vertical-align: middle;
     width: 25.49px;
     height: 25px;
-    background-image: url(images/足跡_1.svg);
+    background-image: url(images/pawpad.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -1187,8 +1219,14 @@ p.clinic-info {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.65;
-    padding-top: 7px;
+    margin-top: 7px;
 }
+@media screen and (max-width: 940px){
+    .form-label {
+        font-size: 1.6rem;
+    }   
+}
+
 .spacing {
     letter-spacing: 2rem;
 }
@@ -1239,7 +1277,7 @@ textarea {
     font-size: 2.5rem;
     letter-spacing: 5px;
     font-weight: 700;
-    /* line-height: 1.32; */
+    line-height: calc(33 / 25);
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 10px;
@@ -1377,7 +1415,7 @@ span.hospital-name {
 }
 .sns-area img{
     width: 22px;
-    height: 18px;
+    height: auto;
 }
 .sns-area a img {
     transition: transform 0.3s ease, opacity 0.3s ease;

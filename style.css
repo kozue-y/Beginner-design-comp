@@ -394,12 +394,13 @@ span {
 }
 .paw-trail {
     position: absolute;
-    left: 90.86%;
-    top: 70.12%;
+    /* left: 90.86%;
+    top: 70.12%; */
+    right: 0;
+    bottom: -15.95%;
     width: 100%;
     height: auto;
     max-width: 83.75px;
-    opacity: 0.7;
     
 }
 @media screen and (max-width:970px) {
@@ -412,7 +413,6 @@ span {
         height: auto;
         right: auto;
         bottom: auto;
-        opacity: 0.7;
       }
       .paw-trail img {
         display: block;
@@ -783,6 +783,7 @@ span {
     .service-image img {
         display: block;
         width: 100%;
+        height: auto;
         /* max-width: 100%; */
     }        
 }
@@ -824,13 +825,12 @@ span {
     max-width: 879px;
     margin: 0 auto;
     list-style: none;
-}
-.news-list {
     border-top: solid 1px #707070;
 }
 .news-item {
     border-bottom: 1px solid #707070;
     padding: 15px 0;
+    margin-left: 0;
 }
 .news-link {
     display: flex;
@@ -878,7 +878,7 @@ span {
         padding-bottom: 50px;
     }
     .news-title {
-        padding: 43px 0 45px 3px;
+        padding-top: 48px;
         gap: 20px;
     }
     .news-link {
@@ -887,31 +887,43 @@ span {
         align-items: flex-start;
         width: 100%;
     }
+    .news-list {
+        border-top: none;
+    }
+    .news-item {
+        padding: 28px 0;
+        margin-left: 10px;
+        margin-right: 6px;
+    }
+    .news-item:first-of-type {
+        border-top: solid 1px #707070;
+    }
     .news-date {
         font-size: 1.7rem;
         line-height: 1.47;
         text-align: left;
-        padding: 28px 0 0 10px;
+        margin-left: 0;
     }
     .news-heading {
         font-size: 2rem;
         line-height: 1.25;
         text-align: left;
-        padding: 3px 0 0 10px;
+        margin-left: 0;
     }
     .news-text {
         max-width: 100%;
         font-size: 1.6rem;
         line-height: 1.5;
         text-align: left;
-        padding: 8px 6px 24px 10px;
+        margin-left: 0;
+        margin-top: 8px;
         overflow-wrap: break-word;
         white-space: normal;
         word-break: break-word;
     }
     .news-item:last-of-type .news-text {
-        letter-spacing: -0.01rem;
-        padding-right: 5px;
+        letter-spacing: -0.02rem;
+        margin-left: 0;
     }
     
 }
@@ -1069,26 +1081,28 @@ p.clinic-info {
 
 @media screen  and (max-width: 767px) {
     .access-title {
-        margin-top: 45px;
+        margin-top: 38px;
         padding-top: 0;
     }
     .access-content {
         display: flex;
         flex-direction: column;
         align-items: unset;
-        padding-bottom: 50px;
+        margin-top: 45px !important;
+        margin-bottom: 50px !important;
+        gap: 0;
     }
     .map-wrap {
         display: block;
         aspect-ratio: 335 / 222 !important;
         /* 横335：縦222 */
         width: 100% !important;
-        height: auto;
     }
     .map {
         flex: unset;
         display: block;
         width: 100% !important;
+        height: auto;
         max-width: none;
         height: auto;
     }
@@ -1099,15 +1113,17 @@ p.clinic-info {
       }
     .info {
         padding: 0;
+        flex: unset;
     }
     p.name {
-        margin-top: 28px;
+        margin-top: 30px;
         text-align: left;
     }
     p.address {
         font-size: 1.6rem;
         line-height: 1.5;
-        padding-top: 13px;
+        margin-top: 12px;
+        margin-bottom: 0;
     }
     span.address {
         font-size: 1.6rem;
@@ -1117,8 +1133,8 @@ p.clinic-info {
     p.tel {
         font-size: 1.6rem;
         line-height: 1.687;
-        padding-top: 4px;
-        padding-bottom: 6px;
+        margin-top: 4px;
+        margin-bottom: 6px;
     }
     .tel-link {
         pointer-events: auto;
@@ -1131,9 +1147,8 @@ p.clinic-info {
     span.tel-number {
         font-size: 2.5rem;
         line-height: 1.6;
-        padding-top: 6px;
-        padding-bottom: 4px;
-        padding-left: 3px;
+        /* padding-top: 6px; */
+        margin-left: 3px;
     }
     p.e-mail {
         font-size: 1.6rem;
@@ -1310,11 +1325,12 @@ textarea {
         width: 100%;
         font-size: 1.8rem;
         padding-top: 0;
+        margin-top: 1px;
     }
     .form-input {
         width: 100%;
         padding-top: 0;
-        padding-bottom: 17px;
+        margin-bottom: 15px;
     }
     .form-textarea {
         width: 100%;
@@ -1328,13 +1344,16 @@ textarea {
     padding: 5px 15px;
     margin-top: 7px;
     }
+    .contact-btn {
+        margin-top: 54px;
+    }
 
     .btn {
         width: 335px;
         height: 41px;
         font-size: 2rem;
         margin-top: 0;
-        margin-bottom: 54px;
+        margin-bottom: 50px;
     }
     
 }
@@ -1416,6 +1435,7 @@ span.hospital-name {
 .sns-area img{
     width: 22px;
     height: auto;
+    object-fit: contain;
 }
 .sns-area a img {
     transition: transform 0.3s ease, opacity 0.3s ease;

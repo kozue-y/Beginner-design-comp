@@ -961,14 +961,22 @@ p.address {
     margin-top: 15px;
     margin-bottom: 10px;
 }
+span.zip {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #505050;
+    margin-right: 16px;
+
+}
 span.address {
     display: inline-block;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    margin-left: 16px;
     color: #505050;
-    white-space: normal;
+    /* white-space: normal; */
 }
 p.tel {
     font-size: 1.8rem;

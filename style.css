@@ -544,7 +544,8 @@ span {
         text-align: center;
         width: 100%;
         gap: 0;
-        margin-bottom: 40px;   
+        margin-bottom: 40px;
+        margin-top: 0;   
     }
     .strengths-image  {
         order: 1 ;
@@ -976,7 +977,6 @@ span.address {
     font-weight: 500;
     line-height: 1.5;
     color: #505050;
-    /* white-space: normal; */
 }
 p.tel {
     font-size: 1.8rem;
@@ -1072,6 +1072,10 @@ p.clinic-info {
         line-height: 1.5;
         margin-top: 12px;
         margin-bottom: 0;
+    }
+    span.zip {
+        font-size: 1.6rem;
+        line-height: 1.5;
     }
     span.address {
         font-size: 1.6rem;

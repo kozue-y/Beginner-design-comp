@@ -24,13 +24,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 960px;
+    /* max-width: 960px; */
+    padding-left: 99px;
+    padding-right: 60px;
     height: 50px;
     margin: 0 auto;
-
-
-
 }
+@media screen and (max-width:870px) {
+    .header-inner {
+        padding-inline: 30px;
+    }
+    
+}
+
 .site-title {
     display: flex;
     align-items: center;
@@ -47,17 +53,7 @@ body {
     font-weight: 700;
     line-height: 1.833;
 }
-@media screen  and (max-width: 980px){
-    .site-title .site-name {
-        font-size: 1.8rem;
-        font-weight: 700;
-        line-height: 1.833;
-        margin-right: 80px;
-    } 
-    .nav-list {
-        margin-right: 15px;
-    }   
-}
+
 
 /* h1にもheightを追加 */
 .site-title h1 {
@@ -81,7 +77,6 @@ span.site-name {
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin-left: 39px;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -126,19 +121,15 @@ span.site-name {
 }  
 
 @media screen and (max-width: 767px) {
-    .header {
-        margin: 0;
-        padding: 0;
+    .header-inner {
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .nav-list {
         display: none;
     }
 
 
-    .site-title a {
-        margin-left: 20px;
-        padding: 0;  
-    }
     .site-title .site-name {
         font-size: 2rem;
         font-weight: 700;
@@ -239,25 +230,6 @@ span {
     }    
 }
 
-@media screen and (max-width: 785px) {
-    .hero-text {
-        width: 350px;
-        height: 150px;
-    }
-
-    .hero-text h2 {
-        font-size: 1.8rem !important;
-        padding-left: 0;
-    }
-    .hero-text h2 span {
-        font-size: 2.5rem !important;
-    }    
-}
-
-
-
-
-
 
 .sp-only {
     display: none;
@@ -303,23 +275,6 @@ span {
 
     .hero-text h2 {
         padding: 0;
-        font-size: 3rem !important;
-        font-weight: 700;
-    }
-    .hero-text h2 span {
-        display: block;
-        font-size: 4.5rem !important;
-        font-weight: 700;
-        line-height: 1.333;
-        margin-top: 5px;
-    }
-    .sp-only {
-        display: inline;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    .hero-text h2 {
         font-size: 2rem !important;
         font-weight: 700;
     }
@@ -329,7 +284,10 @@ span {
         font-weight: 700;
         line-height: 1.333;
         margin-top: 5px;
-    }    
+    }
+    .sp-only {
+        display: inline;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -390,7 +348,7 @@ span {
         width: 100%;
       }
 }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 900px) {
     #greeting p {
         font-size: 1.5rem;
     }
@@ -446,6 +404,7 @@ span {
     background-color: rgba(13, 150, 160, 0.102);
     width: 100%;
     margin: 0 auto;
+    padding-top: 70px;
     padding-bottom: 67px;
 }
 .strengths-title {
@@ -456,7 +415,6 @@ span {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    padding-top: 70px;
     line-height: 1;
 }
 .strengths-title::before,
@@ -513,11 +471,6 @@ span {
     margin-top: 48px;
 }
 
-.strengths-image picture {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
 
 .strengths-image {
     flex: 50%;
@@ -532,9 +485,9 @@ span {
 @media screen  and (max-width: 767px) {
     #strengths {
         padding-bottom: 40px;
+        padding-top: 55px;
     }    
     .strengths-title {
-        padding-top: 55px;
         padding-bottom: 50px;
     }
     .strengths-block {
@@ -600,11 +553,11 @@ span {
 
 @media screen and (max-width: 374px) {
     .strengths-item h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         line-height: 1.5;
     }
     .strengths-item p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.875;
     }
     
@@ -613,6 +566,7 @@ span {
 
 #service {
     width: 100%;
+    padding-top: 59px;
     padding-bottom: 59px;
 }
 
@@ -621,7 +575,6 @@ span {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 65px;
 }    
 .service-title h2 {
     font-size: 2.5rem;
@@ -683,23 +636,20 @@ span {
 
 @media screen and (max-width: 767px) {
     #service {
+        padding-top: 44px;
         padding-bottom: 35px;
     }
     #service .inner {
         max-width: 100%;
     }
 
-    .service-title {
-        padding-top: 44px;
-        padding-bottom: 45px;
-    }
     .service-list {
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
         gap: 0;
-        margin-top: 0 !important;
+        margin-top: 45px;
     }
     .service-block {
         width: 100%;
@@ -742,6 +692,7 @@ span {
 #news {
     width: 100%;
     background-color: rgba(13, 150, 160, 0.102);
+    padding-top: 63px;
     padding-bottom: 67px;
 }
 .news-title {
@@ -749,7 +700,6 @@ span {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 63px;
     margin-bottom: 45px;
 }
 .news-title h2 {
@@ -784,7 +734,7 @@ span {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    padding: 15px 0;
+    padding: 15px 20px 14px 18px;
 }
 
 .news-date {
@@ -793,10 +743,7 @@ span {
     font-weight: 700;
     line-height: 1.47;
     color: #505050;
-    text-align: left;
-    padding-left: 20px;
-   
-
+    text-align: left;   
 }
 .news-heading {
     width: 185px;
@@ -804,7 +751,7 @@ span {
     font-weight: 700;
     line-height: 1.25;
     color: #0D96A0;
-    margin-left: 25px;
+    margin-left: 5px;
     text-align: left;
 }
 .news-link:hover {
@@ -823,10 +770,10 @@ span {
 
 @media screen  and (max-width: 767px) {
     #news {
+        padding-top: 46px;
         padding-bottom: 50px;
     }
     .news-title {
-        padding-top: 46px;
         gap: 20px;
     }
     .news-link {
@@ -877,10 +824,10 @@ span {
 
 #access {
     width: 100%;
+    padding-top: 65px;
     padding-bottom: 70px;
 }
 .access-title {
-    padding-top: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -949,13 +896,13 @@ p.name {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.5;
+    margin-bottom: 15px;
 }
 p.address {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 span.zip {
     display: inline-block;
@@ -995,9 +942,7 @@ p.e-mail {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    padding-bottom: 29px;
-    border-bottom: 1px solid #707070;
-    padding-right: 47px;
+    margin-bottom: 29px;
 }
 .e-mail a {
     transition: opacity 0.3s ease;
@@ -1005,27 +950,30 @@ p.e-mail {
 .e-mail a:hover {
     opacity: 0.7;
 }
+.clinic-info {
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    padding: 15px 4px 12px 4px;
+}
 
 .clinic-info p {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 2.222;
-    margin-top: 13px;
-    padding-left: 4px;
 }
 p.clinic-info {
     margin-top: 0;
-    padding-bottom: 13px;
-    border-bottom: 1px solid #707070;
+    /* padding-bottom: 13px; */
+    /* border-bottom: 1px solid #707070; */
 
 }
 
 @media screen  and (max-width: 767px) {
     #access {
-        padding-bottom: 0;
+        padding-top: 38px;
+        padding-bottom: 50px;
     }
     .access-title {
-        margin-top: 38px;
         padding-top: 0;
     }
     .access-content {
@@ -1033,7 +981,6 @@ p.clinic-info {
         flex-direction: column;
         align-items: unset;
         margin-top: 45px !important;
-        margin-bottom: 50px !important;
         gap: 0;
     }
     .map-wrap {
@@ -1055,18 +1002,16 @@ p.clinic-info {
         display: block;
       }
     .info {
-        padding: 0;
+        padding-top: 30px;
         flex: unset;
     }
     p.name {
-        margin-top: 30px;
         text-align: left;
     }
     p.address {
         font-size: 1.6rem;
         line-height: 1.5;
-        margin-top: 12px;
-        margin-bottom: 0;
+        margin-bottom: 6px;
     }
     span.zip {
         font-size: 1.6rem;
@@ -1080,7 +1025,6 @@ p.clinic-info {
     p.tel {
         font-size: 1.6rem;
         line-height: 1.687;
-        margin-top: 4px;
         margin-bottom: 6px;
     }
     .tel-link {
@@ -1099,10 +1043,13 @@ p.clinic-info {
     p.e-mail {
         font-size: 1.6rem;
         line-height: 1.5;
-        padding-bottom: 19px;
+        margin-bottom: 14px;
     }
     .e-mail a:hover {
         opacity: 0.7;
+    }
+    .clinic-info {
+        padding: 12px 4px;
     }
     .clinic-info p {
         font-size: 1.6rem;
@@ -1122,6 +1069,7 @@ p.clinic-info {
 #contact {
     width: 100%;
     background-color: rgba(13, 150, 160, 0.102);
+    padding-top: 62px;
     padding-bottom: 80px;
 }
 .contact-title {
@@ -1129,7 +1077,6 @@ p.clinic-info {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 62px;
 }
 .contact-title h2 {
     font-size: 2.5rem;
@@ -1146,12 +1093,14 @@ p.clinic-info {
     background-size: contain;
     background-repeat: no-repeat;
 }
+.contact-text {
+    padding-top: 25px;
+}
 .contact-text p {
     font-size: 1.7rem;
     font-weight: 500;
     line-height: 1.764;
     text-align: center;
-    margin-top: 25px;
 }
 .contact-form {
     max-width: 880px;
@@ -1226,11 +1175,6 @@ textarea {
     width: 200px;
     height: 50px;
     background-color: #0D96A0;
-    color: #ffffff;
-    font-size: 2.5rem;
-    letter-spacing: 5px;
-    font-weight: 700;
-    line-height: calc(33 / 25);
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 10px;
@@ -1240,18 +1184,32 @@ textarea {
     background-color: #0A6C75;
     color: #f0f0f0;
 }
+.btn span {
+    display: inline-block;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    color: #ffffff;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    font-weight: 700;
+    line-height: calc(33 / 25);
+
+
+}
 
 @media screen and (max-width: 767px) {
     #contact {
-        padding-bottom: 50px;
-    }
-    .contact-title {
         padding-top: 45px;
+        padding-bottom: 47px;
+    }
+    .contact-text {
+        padding-top: 43px;
+
     }
     .contact-text p  {
-        margin-top: 43px;
         font-size: 1.6rem;
         text-align: left;
+        margin-top: 0;
     }
     .form-item {
         flex-direction: column;
@@ -1265,12 +1223,12 @@ textarea {
         width: 100%;
         font-size: 1.8rem;
         padding-top: 0;
-        margin-top: 1px;
+        margin-top: 0;
+        margin-bottom: 5px;
     }
     .form-input {
         width: 100%;
         padding-top: 0;
-        margin-top: 7px;
         margin-bottom: 15px;
     }
     .form-textarea {
@@ -1286,7 +1244,7 @@ textarea {
     /* margin-top: 7px; */
     }
     .contact-btn {
-        margin-top: 54px;
+        margin-top: 50px;
     }
 
     .btn {
@@ -1311,7 +1269,7 @@ textarea {
 .footer-box {
     display: flex;
     flex-direction: column;
-    padding-bottom: 72px;
+    padding: 66px 20px 72px;
 }
 .footer-nav ul {
     display: flex;
@@ -1327,8 +1285,8 @@ textarea {
 }
 .footer-nav {
     border-bottom: 1px solid #ffffff;
-    width: 737px;
-    padding-top: 66px;
+    max-width: 737px;
+    width: 100%;
     padding-bottom: 21px;
     margin: 0 auto;
     margin-bottom: 0;
@@ -1368,12 +1326,17 @@ span.hospital-name {
     /* margin-bottom: 72px; */
     gap: 12px;
 }
-.sns-area img{
+.sns-area a {
+    display: block;
     width: 22px;
-    height: auto;
-    object-fit: contain;
+    height: 22px;
 }
 .sns-area a img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   .sns-area a:hover img {
@@ -1384,14 +1347,18 @@ span.hospital-name {
  @media screen and (max-width:767px) {
     .footer {
         width: 100%;
-        padding-inline: 20px;
+        /* padding-inline: 20px; */
+    }
+    .footer-box {
+        padding-top: 45px;
+        padding-bottom: 55px;
+
     }
     .footer-nav {
         width: 100%;
-        padding: 5px 20px 19px 19px;
+        padding: 0 20px 19px 19px;
     }
     .footer-nav ul {
-        margin-top: 40px;
         flex-wrap: wrap;
         justify-content: center;
         gap: 0 20px;

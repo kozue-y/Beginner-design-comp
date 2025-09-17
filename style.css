@@ -18,23 +18,17 @@ body {
     left: 0;
     right: 0;
     z-index: 9999;
+    padding-inline: 30px;
     background: #ffffff;
 }
 .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 960px; */
-    padding-left: 99px;
-    padding-right: 60px;
+    max-width: 960px;
+    padding-left: 40px;
     height: 50px;
     margin: 0 auto;
-}
-@media screen and (max-width:870px) {
-    .header-inner {
-        padding-inline: 30px;
-    }
-    
 }
 
 .site-title {
@@ -122,8 +116,7 @@ span.site-name {
 
 @media screen and (max-width: 767px) {
     .header-inner {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-inline: 20px;
     }
     .nav-list {
         display: none;
@@ -132,7 +125,6 @@ span.site-name {
 
     .site-title .site-name {
         font-size: 2rem;
-        font-weight: 700;
         line-height: 1.65;
     }
 } 
@@ -188,12 +180,6 @@ span.site-name {
 }
 
 
-@media screen and (max-width: 920px) {
-    .hero-text {
-        padding-left: 80px;
-    }
-    
-}
 
 .hero-text h2 {
     font-size: 2.5rem;
@@ -475,11 +461,18 @@ span {
 .strengths-image {
     flex: 50%;
     aspect-ratio: 440 / 247;
-}
-.strengths-image img {
     width: 100%;
-    height: 100%;
+}
+
+.strengths-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 440 / 247;
     object-fit: cover;
+}
+.sp-374only {
+    display: none;
 }
 
 @media screen  and (max-width: 767px) {
@@ -505,6 +498,13 @@ span {
         display: block;
         width: 100%;
         height: auto;
+        aspect-ratio: 335 /200;
+    }
+    .strengths-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 335 /200;
     }
 
     .strengths-item {
@@ -552,21 +552,15 @@ span {
 }
 
 @media screen and (max-width: 374px) {
-    .strengths-item h3 {
-        font-size: 1.6rem;
-        line-height: 1.5;
-    }
-    .strengths-item p {
-        font-size: 1.2rem;
-        line-height: 1.875;
-    }
-    
+.sp-374only {
+    display: inline;
+}    
 }
 
 
 #service {
     width: 100%;
-    padding-top: 59px;
+    padding-top: 67px;
     padding-bottom: 59px;
 }
 
@@ -593,16 +587,13 @@ span {
     background-repeat: no-repeat;
 }
 .service-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     margin-top: 50px;
 }
 .service-block {
     text-align: center;
-    width: 260px;
-    height: 100%;
 }
 .service-item {
     margin-top: 19px;
@@ -657,7 +648,6 @@ span {
     }
     .service-item {
         margin-top: 32px;
-        /* margin-bottom: 35px; */
     }
     .service-block:last-child {
         margin-bottom: 0;
@@ -896,13 +886,13 @@ p.name {
     font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 p.address {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 span.zip {
     display: inline-block;
@@ -1002,7 +992,7 @@ p.clinic-info {
         display: block;
       }
     .info {
-        padding-top: 30px;
+        margin-top: 30px;
         flex: unset;
     }
     p.name {
@@ -1094,7 +1084,7 @@ p.clinic-info {
     background-repeat: no-repeat;
 }
 .contact-text {
-    padding-top: 25px;
+    margin-top: 25px;
 }
 .contact-text p {
     font-size: 1.7rem;
@@ -1203,7 +1193,7 @@ textarea {
         padding-bottom: 47px;
     }
     .contact-text {
-        padding-top: 43px;
+        margin-top: 43px;
 
     }
     .contact-text p  {
@@ -1214,7 +1204,11 @@ textarea {
     .form-item {
         flex-direction: column;
         align-items: flex-end;
+        margin-bottom: 15px;
         gap: 0;
+    }
+    .form-item:last-of-type {
+        margin-bottom: 0;
     }
     .form-items {
         gap: 0;
@@ -1229,7 +1223,6 @@ textarea {
     .form-input {
         width: 100%;
         padding-top: 0;
-        margin-bottom: 15px;
     }
     .form-textarea {
         width: 100%;
@@ -1244,7 +1237,7 @@ textarea {
     /* margin-top: 7px; */
     }
     .contact-btn {
-        margin-top: 50px;
+        margin-top: 55px;
     }
 
     .btn {
@@ -1265,11 +1258,11 @@ textarea {
 .footer {
     width: 100%;
     background-color: #505050;
+    padding: 66px 0 72px;
 }
 .footer-box {
     display: flex;
     flex-direction: column;
-    padding: 66px 20px 72px;
 }
 .footer-nav ul {
     display: flex;
@@ -1322,8 +1315,7 @@ span.hospital-name {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    /* margin-bottom: 72px; */
+    margin-top: 6px;
     gap: 12px;
 }
 .sns-area a {
@@ -1347,12 +1339,8 @@ span.hospital-name {
  @media screen and (max-width:767px) {
     .footer {
         width: 100%;
-        /* padding-inline: 20px; */
-    }
-    .footer-box {
         padding-top: 45px;
         padding-bottom: 55px;
-
     }
     .footer-nav {
         width: 100%;

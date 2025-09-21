@@ -18,17 +18,23 @@ body {
     left: 0;
     right: 0;
     z-index: 9999;
-    padding-inline: 30px;
     background: #ffffff;
 }
 .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 960px;
-    padding-left: 40px;
+    max-width: 1080px;
+    padding-left: 99px;
+    padding-right: 60px;
     height: 50px;
     margin: 0 auto;
+}
+@media screen  and (max-width: 900px) {
+    .header-inner {
+        padding-inline: 30px;
+    }
+    
 }
 
 .site-title {

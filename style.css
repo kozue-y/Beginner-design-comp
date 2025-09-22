@@ -340,7 +340,7 @@ span {
         width: 100%;
       }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 970px) {
     #greeting p {
         font-size: 1.5rem;
     }

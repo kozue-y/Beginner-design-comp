@@ -30,7 +30,7 @@ body {
     height: 50px;
     margin: 0 auto;
 }
-@media screen  and (max-width: 900px) {
+@media screen  and (max-width: 970px) {
     .header-inner {
         padding-inline: 30px;
     }
@@ -208,7 +208,7 @@ span {
     display: block;
     margin-top: 8px;
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 970px) {
     .hero-text {
         width: 395px;
         height: 170px;
@@ -427,15 +427,20 @@ span {
     margin: 0 auto;
     padding-inline: 30px;
 }
+.strengths-list {
+    margin-top: 50px;
+}
 
 .strengths-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 43px;
-    margin-top: 50px;
-    
+    margin-top: 50px;    
 }
+.strengths-block:first-of-type {
+    margin-top: 0;
+  }
 .strengths-item {
     flex: 45%;    
 }
@@ -485,10 +490,10 @@ span {
     #strengths {
         padding-bottom: 40px;
         padding-top: 55px;
-    }    
-    .strengths-title {
-        padding-bottom: 50px;
-    }
+    } 
+    .strengths-list {
+        margin-top: 52px;
+    }   
     .strengths-block {
         display: flex;
         flex-direction: column !important;
@@ -696,7 +701,6 @@ span {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-bottom: 45px;
 }
 .news-title h2 {
     font-size: 2.5rem;
@@ -716,13 +720,13 @@ span {
 }
 .news-list {
     max-width: 879px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     list-style: none;
     border-top: solid 1px #707070;
+    margin-top: 45px;
 }
 .news-item {
     border-bottom: 1px solid #707070;
-    /* padding: 15px 0; */
     margin-left: 0;
 }
 .news-link {
@@ -781,6 +785,7 @@ span {
     }
     .news-list {
         border-top: none;
+        margin-top: 42px;
     }
     .news-item:first-of-type {
         border-top: solid 1px #707070;

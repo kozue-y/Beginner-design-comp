@@ -55,7 +55,6 @@ body {
 }
 
 
-/* h1にもheightを追加 */
 .site-title h1 {
     margin: 0;
     padding: 0;
@@ -421,7 +420,6 @@ span {
     background-repeat: no-repeat
 }
 
-/* content-box max-width の値に padding を含めないようにする */
 .inner {
     max-width: 940px;
     margin: 0 auto;
@@ -463,7 +461,6 @@ span {
     flex-direction: row-reverse;
     margin-top: 50px;
 }
-/* ↑2番目配置入れ替え */
 .strengths-block:nth-of-type(3) {
     margin-top: 48px;
 }
@@ -524,7 +521,6 @@ span {
         width: 100%;
         order: 2;
         margin-top: 26px;
-        /* margin-bottom: 40px; */
     }
     .strengths-block:last-child {
         margin-bottom: 0;
@@ -720,7 +716,6 @@ span {
 }
 .news-list {
     max-width: 879px;
-    /* margin: 0 auto; */
     list-style: none;
     border-top: solid 1px #707070;
     margin-top: 45px;
@@ -928,12 +923,14 @@ p.tel {
     margin-bottom: 10px;
 }
 span.tel-number {
+    display: inline-block;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.6;
 }
 
 .tel-link {
+    display: inline-block;
     pointer-events: none;
     cursor: default;
     margin-left: -5px;
@@ -964,8 +961,6 @@ p.e-mail {
 }
 p.clinic-info {
     margin-top: 0;
-    /* padding-bottom: 13px; */
-    /* border-bottom: 1px solid #707070; */
 
 }
 
@@ -1029,17 +1024,19 @@ p.clinic-info {
         margin-bottom: 6px;
     }
     .tel-link {
+        display: inline-block;
         pointer-events: auto;
         cursor: pointer;
         transition: opacity 0.3s ease;
+        margin-left: 3px;
     }
     .tel-link:hover {
         opacity: 0.7;
     }
     span.tel-number {
+        display: inline-block;
         font-size: 2.5rem;
         line-height: 1.6;
-        margin-left: 3px;
     }
     p.e-mail {
         font-size: 1.6rem;

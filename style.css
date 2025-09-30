@@ -132,14 +132,7 @@ span.site-name {
         font-size: 2rem;
         line-height: 1.65;
     }
-} 
-@media screen and (max-width: 340px) {
-    .site-title .site-name {
-        font-size: 1.6rem;
-    }
-    
-}   
-    
+}     
 
 
 #hero {

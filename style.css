@@ -1112,16 +1112,11 @@ p.clinic-info {
     gap: 29px;
 }
 .form-label {
-    width: 16%;
+    width: 14rem;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.65;
     margin-top: 7px;
-}
-@media screen and (max-width: 940px){
-    .form-label {
-        font-size: 1.6rem;
-    }   
 }
 
 .spacing {
